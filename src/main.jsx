@@ -5,9 +5,13 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import App from './App';
 import filterReducer from './reducers/filterReducer';
+import emailReducer from './reducers/emailReducer';
 
 export const store = configureStore({
-  reducer: {filter: filterReducer},
+  reducer: {
+    filter: filterReducer,
+    email: emailReducer
+  },
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -3,6 +3,10 @@
   font-family: sans-serif;
 }
 
+b{
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -23,4 +27,72 @@ body {
 }
 .filterButton-active{
   background-color: #e1e4ea;
+}
+
+.emailRow{
+  font-size: 14px;
+  color: #636363;
+  background-color: #fff;
+  border: 1px solid #e1e4ea;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.emailRow h3{
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.emailRow p{
+  margin :1rem 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 350px;
+}
+
+.profileIcon{
+  height:48px;
+  border-radius: 25px;
+  background-color: #e54065;
+  color:#fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  margin-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+.main-container{
+  display: flex;
+  margin-left : 3rem;
+}
+
+.email-container{
+  flex-grow: 1;
+  margin-right: 2rem;
+}
+
+.emailBody{
+  
+  height : 78vh;
+  background-color: #fff;
+  padding:2rem;
+  margin-right: 3rem;
+  border: 1px solid #e1e4ea;
+  border-radius: 12px;
+  color:#636363;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.emailBody h1{
+  margin:0;
+
 }
