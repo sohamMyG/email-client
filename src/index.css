@@ -23,14 +23,14 @@ body {
 }
 
 .filterButton:hover{
-  background-color: #e1e4ea;
+  transform: scale(1.1);
 }
 .filterButton-active{
   background-color: #e1e4ea;
 }
 
 .emailRow{
-  font-size: 14px;
+  font-size: 15px;
   color: #636363;
   background-color: #fff;
   border: 1px solid #e1e4ea;
@@ -54,7 +54,15 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 350px;
+  
+}
+
+.clickedEmailRow{
+  border:1px solid #e54065
+}
+
+.readEmailRow{
+  background-color: #f2f2f2;
 }
 
 .profileIcon{
@@ -67,6 +75,24 @@ body {
   padding: 0.75rem 1rem;
   margin-right: 1.5rem;
   box-sizing: border-box;
+}
+
+.favorite{
+  color:#e54065;
+  margin-left: 1.5rem;
+  font-weight: bold;
+}
+
+.favoriteButton{
+  background-color: #e54065;
+  color: white;
+  border: none;
+  height: 35px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem ;
+  box-sizing: border-box;
+  float: right;
+  margin-top:-3.75rem;
 }
 
 .main-container{
@@ -94,5 +120,5 @@ body {
 
 .emailBody h1{
   margin:0;
-
+  margin-bottom: 1.5rem;
 }

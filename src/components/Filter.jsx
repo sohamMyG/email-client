@@ -1,22 +1,28 @@
 import { setFilter } from "../reducers/filterReducer"
 import { useDispatch,useSelector } from "react-redux"
+import { addRead } from "../reducers/filterReducer"
 
 const Filter = ()=>{
 
     const dispatch = useDispatch()
-    const filter = useSelector(state => state.filter)
+    const filter = useSelector(state => state.filter.selected)
     const handleClick = (e) => {
-        dispatch(setFilter(e.target.textContent.toLowerCase()))
+        const clickedFilter = e.target.textContent.toLowerCase()
+        if(filter===clickedFilter){
+            dispatch(setFilter(''))
+            return
+        }
+        dispatch(setFilter(clickedFilter))
     
     }
-
+    
     return(
         <div style={{
             display:'flex',
             alignItems:'center',
             justifyContent:'flex-start',
-            margin: '2rem 2.5rem',
-            marginBottom :'1rem'
+            margin: '2rem 0 1.5rem 2.5rem',
+            
         }}>
             <span style={{margin:'0px 10px'}}>Filter By: </span>
             <button className={"filterButton " + (filter==='unread' && "filterButton-active")} onClick={handleClick}>Unread</button>

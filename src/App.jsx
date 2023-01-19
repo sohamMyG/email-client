@@ -4,6 +4,7 @@ import Emails from './components/Emails'
 import { useDispatch } from 'react-redux'
 import { setEmails } from './reducers/emailReducer'
 
+
 function App() {
   const dispatch = useDispatch()
 
@@ -17,7 +18,9 @@ function App() {
     
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => dispatch(setEmails(data)));
+      .then((data) => {
+        dispatch(setEmails(data))
+      });
   },[])
 
   return (
