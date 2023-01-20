@@ -33,7 +33,7 @@ const EmailRow = ({email,setClicked,clicked}) => {
     return(
         <div className={classNames.join(' ')} onClick={handleClick}>
             <div className="profileIcon">{email.from.name[0].toUpperCase()}</div>
-            <div style={{width:'350px'}}>
+            <div className={clicked && 'clickedEmailRowBody'}>
                 <h3>From: <b>{email.from.name}  {email.from.email}</b> </h3>
                 <h3>Subject: <b>{email.subject}</b></h3>
                 <p>{email.short_description}</p>

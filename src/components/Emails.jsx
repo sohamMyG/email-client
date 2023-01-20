@@ -11,7 +11,7 @@ const Emails = () =>{
     
     let filter = useSelector(state=>state.filter)
     
-    if(!emails){return <div></div>}
+    if(!emails){return}
 
     if(filter.selected){
         const selected = filter.selected
@@ -30,7 +30,7 @@ const Emails = () =>{
     
 
     
-    const emailRows = emails.map( (e) => 
+    const emailRows = emails.length===0 ?  <div className="emailRow">No emails zzz...</div>  :  emails.map( (e) => 
             <EmailRow 
                 key={e.id}
                 email={e} 
@@ -38,7 +38,7 @@ const Emails = () =>{
                 setClicked={setClicked}
             />           
         )
-    
+    console.log(emailRows)
     return(
         <div className="main-container">
             <div className='email-container'>{emailRows}</div> 

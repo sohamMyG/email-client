@@ -40,6 +40,7 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
+  min-width: 430px;
 }
 
 .emailRow h3{
@@ -58,10 +59,14 @@ body {
 }
 
 .clickedEmailRow{
-  border:1px solid #e54065
+  border:1px solid #e54065;
 }
 
-.readEmailRow{
+.clickedEmailRowBody{
+  width:350px
+}
+
+.readEmailRow {
   background-color: #f2f2f2;
 }
 
